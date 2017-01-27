@@ -1,0 +1,16 @@
+{
+  "name": "pusher-platform-auth-example-express",
+  "version": "0.1.0",
+  "description": "Pusher Platform auth endpoint example - using Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "pusher-platform": "^0.1.0"
+  }
+}
