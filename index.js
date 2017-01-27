@@ -17,6 +17,22 @@ app.post('/auth', bodyParser.urlencoded({ extended: true }), function (req, res)
   });
 });
 
+app.post('/append', bodyParser.text({ type: "*/*" }), function (req, res) {
+  pusherApp.request({
+    method: "POST",
+    path: "feeds/playground",
+    body: pusher.writeJSON({
+      items: [req.body],
+    }),
+  }).then(function() {
+    console.log("Successfully appended", req.body, "to the playground feed");
+    res.sendStatus(204);
+  }).catch(function(e) {
+    console.log("Error while appending to the playground feed:", e);
+    res.sendStatus(500);
+  });
+});
+
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
   console.log('Pusher Platform auth example listening on port ' + port);
