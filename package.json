@@ -11,6 +11,6 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.0",
-    "pusher-platform": "^0.1.0"
+    "pusher-platform": "^0.2.0"
   }
 }
