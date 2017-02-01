@@ -5,7 +5,7 @@ var pusher = require("pusher-platform");
 
 var pusherApp = new pusher.App({
   cluster: process.env.PUSHER_CLUSTER,
-  appID: process.env.PUSHER_APP_ID,
+  appId: process.env.PUSHER_APP_ID,
   appKey: process.env.PUSHER_APP_KEY,
 });
 
